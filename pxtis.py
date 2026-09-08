@@ -1,3 +1,22 @@
+import os
+import threading
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+class HealthCheckHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Bot is active and running!")
+
+    def log_message(self, format, *args):
+        return
+
+def start_dummy_server():
+    port = int(os.environ.get("PORT", 8080))
+    server = HTTPServer(("0.0.0.0", port), HealthCheckHandler)
+    server.serve_forever()
+
+threading.Thread(target=start_dummy_server, daemon=True).start()
 # -*- coding: utf-8 -*-
 # ============================================================
 #  AUTO-DEPENDENCY BOOTSTRAP  (single-file hosting-friendly)
@@ -93,7 +112,7 @@ import os as _os
 import html as _h
 
 # ==================== CONFIGURATION ====================
-BOT_TOKEN = "8658784984:AAHLsnXmaGl6zIfAEY5nizzBdDAKuV_wUjg"
+BOT_TOKEN = "8806413040:AAG9N5pcPgpZqWvjpMo8Upt39igZPc-BdSo"
 ADMIN_ID = 8998330094
 SUPPORT_USERNAME = "SubNexa_Support_Team1"
 
