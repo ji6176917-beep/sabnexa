@@ -112,7 +112,7 @@ import os as _os
 import html as _h
 
 # ==================== CONFIGURATION ====================
-BOT_TOKEN = "8812698739:AAGJVaEEcgMpRrvXWtQHTTHGbEB68UlwJdc"
+BOT_TOKEN = "8812698739:AAGiaMVWth4yCXYhd1tDItnIIJP5YWH7j80"
 ADMIN_ID = 8998330094
 SUPPORT_USERNAME = "SubNexa_Support_Team1"
 
